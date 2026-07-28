@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>RD Photography | Cinematic Wedding &amp; Portrait Photography</title>
+<meta name="description" content="RD Photography captures timeless weddings, pre-weddings, portraits, events and cinematic stories through a creative and cinematic lens.">
+<meta property="og:title" content="RD Photography | Capturing Moments. Creating Memories.">
+<meta property="og:description" content="RD Photography captures timeless weddings, pre-weddings, portraits, events and cinematic stories through a creative and cinematic lens.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23050505%22/><text x=%2250%22 y=%2265%22 font-size=%2260%22 fill=%22%23C9A45C%22 text-anchor=%22middle%22 font-family=%22serif%22>R</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- Grain overlay -->
+<div class="grain"></div>
+
+<!-- Custom cursor (desktop only) -->
+<div class="cursor" id="cursor">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <span class="cursor-label" id="cursorLabel"></span>
+</div>
+
+<!-- ============ INTRO / CAMERA EXPERIENCE ============ -->
+<section class="intro" id="intro">
+  <div class="intro-bg">
+    <!-- Replace via CSS background-image with a real brand-neutral camera photo:
+         assets/images/camera-intro.jpg (no visible logos/brand marks) -->
+    <div class="intro-camera-photo" id="cameraPhoto"></div>
+    <div class="intro-vignette"></div>
+    <div class="dust" id="dust"></div>
+    <div class="rays"></div>
+  </div>
+
+  <div class="intro-content">
+    <img src="assets/images/logo.png" alt="RD Photography logo" class="intro-logo">
+    <div class="intro-brand" id="introBrand">
+      <span class="intro-r" data-split>RD</span>
+      <span class="intro-p" data-split>PHOTOGRAPHY</span>
+    </div>
+    <p class="intro-tagline" id="introTagline">Capturing Moments. Creating Memories.</p>
+
+    <button class="enter-btn" id="enterBtn">
+      <span class="enter-btn-label">ENTER THE CAMERA</span>
+      <span class="enter-btn-line"></span>
+    </button>
+  </div>
+
+  <!-- Shutter / aperture / flash overlays -->
+  <div class="aperture" id="aperture">
+    <div class="blade b1"></div>
+    <div class="blade b2"></div>
+    <div class="blade b3"></div>
+    <div class="blade b4"></div>
+    <div class="blade b5"></div>
+    <div class="blade b6"></div>
+  </div>
+  <div class="flash" id="flash"></div>
+</section>
+
+<!-- ============ MAIN SITE ============ -->
+<div class="site" id="site">
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav-logo">
+      <img src="assets/images/logo.png" alt="RD Photography logo" class="nav-logo-icon">
+      <span class="nav-logo-text">RD<span>PHOTOGRAPHY</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#films">Films</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="https://www.instagram.com/rd__photography______/" target="_blank" rel="noopener" class="nav-insta" aria-label="Instagram">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></svg>
+    </a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#films">Films</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.instagram.com/rd__photography______/" target="_blank" rel="noopener" class="mobile-insta">Instagram →</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-media">
+      <!-- Replace with RD Photography's real wedding hero photo -->
+      <div class="ph-image ph-hero" data-parallax></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="eyebrow" data-reveal>Storytelling Through My Lens</span>
+      <h1 class="hero-title">
+        <span data-reveal>Every Moment</span>
+        <span data-reveal>Deserves To Be</span>
+        <span data-reveal class="gold-italic">Remembered.</span>
+      </h1>
+      <p class="hero-sub" data-reveal>We don't just capture photographs. We capture emotions, stories and memories that live forever.</p>
+      <div class="hero-ctas" data-reveal>
+        <a href="#portfolio" class="btn btn-gold">Explore My Work</a>
+        <a href="#films" class="btn btn-ghost"><span class="play-dot"></span>Watch Film</a>
+      </div>
+    </div>
+    <div class="scroll-hint"><span></span>Scroll</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-media">
+      <!-- Replace with real photo of the photographer -->
+      <div class="ph-image ph-about" data-parallax-slow></div>
+      <div class="about-frame"></div>
+    </div>
+    <div class="about-content">
+      <span class="eyebrow" data-reveal>About RD Photography</span>
+      <h2 class="section-title" data-reveal>I Capture<br><span class="gold-italic">Stories.</span></h2>
+      <p data-reveal>Photography is not just about taking a picture. It is about freezing a feeling, preserving an emotion, and creating a memory that can be experienced again and again.</p>
+      <p data-reveal>Every frame is composed with intention — the light, the pause before a laugh, the quiet look between two people. RD Photography exists to notice what would otherwise be forgotten, and hold onto it, permanently.</p>
+      <span class="gold-line" data-reveal></span>
+      <a href="#contact" class="btn btn-outline" data-reveal>Let's Create Together</a>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal>The Portfolio</span>
+      <h2 class="section-title" data-reveal>Selected <span class="gold-italic">Stories</span></h2>
+    </div>
+
+    <div class="filters" data-reveal>
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="wedding">Weddings</button>
+      <button class="filter" data-filter="prewedding">Pre-Weddings</button>
+      <button class="filter" data-filter="portrait">Portraits</button>
+      <button class="filter" data-filter="events">Events</button>
+      <button class="filter" data-filter="fashion">Fashion</button>
+    </div>
+
+    <div class="gallery" id="gallery">
+      <!-- Items injected/managed via gallery.js, markup below for structure & no-JS fallback -->
+      <div class="g-item size-l" data-cat="wedding">
+        <div class="ph-image" data-src="assets/images/portfolio/wedding-01.webp"></div>
+        <div class="g-meta"><span class="g-num">01</span><span class="g-cat">Wedding</span></div>
+      </div>
+      <div class="g-item size-s" data-cat="prewedding">
+        <div class="ph-image" data-src="assets/images/portfolio/prewedding-01.webp"></div>
+        <div class="g-meta"><span class="g-num">02</span><span class="g-cat">Pre-Wedding</span></div>
+      </div>
+      <div class="g-item size-m" data-cat="portrait">
+        <div class="ph-image" data-src="assets/images/portfolio/portrait-01.webp"></div>
+        <div class="g-meta"><span class="g-num">03</span><span class="g-cat">Portrait</span></div>
+      </div>
+      <div class="g-item size-m" data-cat="wedding">
+        <div class="ph-image" data-src="assets/images/portfolio/wedding-02.webp"></div>
+        <div class="g-meta"><span class="g-num">04</span><span class="g-cat">Wedding</span></div>
+      </div>
+      <div class="g-item size-s" data-cat="fashion">
+        <div class="ph-image" data-src="assets/images/portfolio/fashion-01.webp"></div>
+        <div class="g-meta"><span class="g-num">05</span><span class="g-cat">Fashion</span></div>
+      </div>
+      <div class="g-item size-l" data-cat="events">
+        <div class="ph-image" data-src="assets/images/portfolio/events-01.webp"></div>
+        <div class="g-meta"><span class="g-num">06</span><span class="g-cat">Events</span></div>
+      </div>
+      <div class="g-item size-m" data-cat="prewedding">
+        <div class="ph-image" data-src="assets/images/portfolio/prewedding-02.webp"></div>
+        <div class="g-meta"><span class="g-num">07</span><span class="g-cat">Pre-Wedding</span></div>
+      </div>
+    </div>
+
+    <div class="view-all-wrap">
+      <a href="#" class="btn btn-outline" id="viewAllBtn">View Full Gallery</a>
+    </div>
+  </section>
+
+  <!-- LOVE CAPTURED FOREVER -->
+  <section class="story" id="story">
+    <div class="story-layers">
+      <div class="ph-image story-l1" data-story-speed="0.3"></div>
+      <div class="ph-image story-l2" data-story-speed="0.55"></div>
+      <div class="ph-image story-l3" data-story-speed="0.8"></div>
+    </div>
+    <div class="story-text">
+      <h2 class="section-title huge" data-reveal>LOVE,<br>CAPTURED<br><span class="gold-italic">FOREVER.</span></h2>
+    </div>
+  </section>
+
+  <!-- FILMS -->
+  <section class="films" id="films">
+    <video class="films-video" id="showreel" muted loop playsinline poster="assets/images/film.webp">
+      <source src="assets/videos/showreel.mp4" type="video/mp4">
+    </video>
+    <div class="films-overlay"></div>
+    <div class="films-content">
+      <span class="eyebrow" data-reveal>Cinematic Stories</span>
+      <h2 class="section-title" data-reveal>Feel The <span class="gold-italic">Moments.</span></h2>
+      <button class="play-btn" id="playBtn" aria-label="Play showreel">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 4L20 12L6 20V4Z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal>What I Offer</span>
+      <h2 class="section-title" data-reveal>Services &amp; <span class="gold-italic">Specialities</span></h2>
+    </div>
+    <div class="services-list">
+      <div class="service-row" data-bg="wedding">
+        <span class="s-num">01</span>
+        <h3 class="s-title">Wedding Photography</h3>
+        <span class="s-arrow">→</span>
+      </div>
+      <div class="service-row" data-bg="prewedding">
+        <span class="s-num">02</span>
+        <h3 class="s-title">Pre-Wedding Photography</h3>
+        <span class="s-arrow">→</span>
+      </div>
+      <div class="service-row" data-bg="portrait">
+        <span class="s-num">03</span>
+        <h3 class="s-title">Portrait Photography</h3>
+        <span class="s-arrow">→</span>
+      </div>
+      <div class="service-row" data-bg="events">
+        <span class="s-num">04</span>
+        <h3 class="s-title">Event Photography</h3>
+        <span class="s-arrow">→</span>
+      </div>
+      <div class="service-row" data-bg="fashion">
+        <span class="s-num">05</span>
+        <h3 class="s-title">Fashion Photography</h3>
+        <span class="s-arrow">→</span>
+      </div>
+      <div class="service-row" data-bg="films">
+        <span class="s-num">06</span>
+        <h3 class="s-title">Cinematic Wedding Films</h3>
+        <span class="s-arrow">→</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal>How It Works</span>
+      <h2 class="section-title" data-reveal>From Moment<br><span class="gold-italic">To Memory.</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-step" data-reveal><span class="tl-num">01</span><h4>Connect</h4><p>We talk through your story, your day, your people.</p></div>
+      <div class="tl-step" data-reveal><span class="tl-num">02</span><h4>Plan</h4><p>Locations, light, timing — mapped so nothing is rushed.</p></div>
+      <div class="tl-step" data-reveal><span class="tl-num">03</span><h4>Capture</h4><p>Present, unobtrusive, watching for the real moment.</p></div>
+      <div class="tl-step" data-reveal><span class="tl-num">04</span><h4>Create</h4><p>Editing that keeps emotion honest, not overworked.</p></div>
+      <div class="tl-step" data-reveal><span class="tl-num">05</span><h4>Deliver</h4><p>A gallery and film you'll return to for years.</p></div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="insta" id="insta">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal>@rd__photography______</span>
+      <h2 class="section-title" data-reveal>Follow The <span class="gold-italic">Journey</span></h2>
+    </div>
+    <div class="insta-grid">
+      <div class="ph-image insta-item"></div>
+      <div class="ph-image insta-item"></div>
+      <div class="ph-image insta-item"></div>
+      <div class="ph-image insta-item"></div>
+      <div class="ph-image insta-item"></div>
+      <div class="ph-image insta-item"></div>
+      <div class="ph-image insta-item"></div>
+      <div class="ph-image insta-item"></div>
+    </div>
+    <a href="https://www.instagram.com/rd__photography______/" target="_blank" rel="noopener" class="btn btn-gold insta-follow">Follow @RD_Photography</a>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="section-head">
+      <span class="eyebrow" data-reveal>Kind Words</span>
+      <h2 class="section-title" data-reveal>From Those <span class="gold-italic">We've Captured</span></h2>
+    </div>
+    <div class="testi-slider" id="testiSlider">
+      <div class="testi active">
+        <span class="quote-mark">“</span>
+        <p>RD didn't just photograph our wedding — he understood it before it happened. Every photo feels like the day, exactly as we remember it.</p>
+        <span class="testi-name">Aravind &amp; Divya</span><span class="testi-type">Wedding</span>
+      </div>
+      <div class="testi">
+        <span class="quote-mark">“</span>
+        <p>Effortless to work with, and the film he made still gives me chills. Worth every rupee.</p>
+        <span class="testi-name">Meera S.</span><span class="testi-type">Pre-Wedding</span>
+      </div>
+      <div class="testi">
+        <span class="quote-mark">“</span>
+        <p>Our portraits look like they belong in a magazine. Genuinely one of the best decisions we made for the event.</p>
+        <span class="testi-name">Karthik R.</span><span class="testi-type">Portrait Session</span>
+      </div>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-head">
+      <h2 class="section-title huge" data-reveal>Your Story.<br><span class="gold-italic">My Lens.</span></h2>
+      <p data-reveal>Let's create something unforgettable.</p>
+    </div>
+
+    <div class="contact-quick" data-reveal>
+      <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="quick-link">WhatsApp</a>
+      <a href="https://www.instagram.com/rd__photography______/" target="_blank" rel="noopener" class="quick-link">Instagram</a>
+      <a href="tel:+910000000000" class="quick-link">Call</a>
+      <a href="mailto:hello@rdphotography.com" class="quick-link">Email</a>
+    </div>
+
+    <form class="enquiry-form" id="enquiryForm" action="mailto:hello@rdphotography.com" method="get">
+      <div class="field">
+        <input type="text" id="fName" name="name" required placeholder=" ">
+        <label for="fName">Name</label>
+      </div>
+      <div class="field">
+        <input type="email" id="fEmail" name="email" required placeholder=" ">
+        <label for="fEmail">Email</label>
+      </div>
+      <div class="field">
+        <input type="tel" id="fPhone" name="phone" placeholder=" ">
+        <label for="fPhone">Phone</label>
+      </div>
+      <div class="field">
+        <select id="fType" name="eventType" required>
+          <option value="" disabled selected></option>
+          <option>Wedding</option>
+          <option>Pre-Wedding</option>
+          <option>Portrait</option>
+          <option>Event</option>
+          <option>Fashion</option>
+        </select>
+        <label for="fType" class="select-label">Event Type</label>
+      </div>
+      <div class="field">
+        <input type="date" id="fDate" name="eventDate" placeholder=" ">
+        <label for="fDate">Event Date</label>
+      </div>
+      <div class="field field-full">
+        <textarea id="fMessage" name="message" rows="3" required placeholder=" "></textarea>
+        <label for="fMessage">Message</label>
+      </div>
+      <button type="submit" class="btn btn-gold field-full">Send Enquiry</button>
+      <p class="form-note">This opens your email app. To connect a live backend, replace the form action with a Formspree endpoint or your own API route.</p>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/images/logo.png" alt="RD Photography logo" class="footer-logo-icon">
+        RD<span>PHOTOGRAPHY</span><p>Capturing Moments.<br>Creating Memories.</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#films">Films</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="https://www.instagram.com/rd__photography______/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:hello@rdphotography.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 RD Photography. All Rights Reserved.</div>
+  </footer>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <div class="lb-image-wrap"><div class="ph-image lb-image" id="lbImage"></div></div>
+  <button class="lb-next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <button class="vm-close" id="vmClose" aria-label="Close">✕</button>
+  <video id="vmVideo" controls playsinline poster="assets/images/film.webp">
+    <source src="assets/videos/showreel.mp4" type="video/mp4">
+  </video>
+</div>
+
+<audio id="shutterSound" preload="auto">
+  <source src="assets/audio/shutter.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+<script src="js/cursor.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
