@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RD Photography — Cinematic Wedding &amp; Portrait Studio, Thiruppanandal</title>
+<meta name="description" content="Ultra-premium cinematic wedding and portrait photography in Thiruppanandal, Tamil Nadu.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/intro.css">
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     CAMERA INTRO — extracted from legacy build. Do not restyle
+     structurally; only color tokens were remapped (see intro.css).
+     ============================================================ -->
+<div class="intro" id="rdIntro">
+  <img src="assets/images/camera-intro.jpg" alt="Camera" class="intro-cam-img" id="introCamImg">
+  <div class="intro-glow" id="introGlow"></div>
+  <div class="intro-particles" id="introParticles"></div>
+  <div class="intro-vignette"></div>
+  <div class="intro-content">
+    <img class="intro-logo" src="assets/images/logo.png" alt="RD Photography logo">
+    <p class="intro-eyebrow">Thiruppanandal · Tamil Nadu</p>
+    <h1 class="intro-title">RD <span>Photography</span></h1>
+    <p class="intro-tagline">Capturing Moments. Creating Memories.</p>
+    <button class="intro-enter-btn" id="introEnterBtn" type="button">Enter the Studio</button>
+    <p class="intro-tap-hint">Tap anywhere to enter</p>
+  </div>
+
+  <div class="intro-focus" id="introFocus">
+    <span class="fc tl"></span><span class="fc tr"></span><span class="fc bl"></span><span class="fc br"></span>
+    <span class="intro-focus-label">AF LOCK</span>
+  </div>
+
+  <div class="intro-hud" id="introHud">
+    <div class="hud-node hud-tl">
+      <span class="hud-rec"><span class="hud-rec-dot"></span>REC</span>
+      <span>AF-C</span>
+    </div>
+    <div class="hud-node hud-tr">
+      <span>4K</span>
+      <span class="hud-battery"><span class="hud-battery-shell"><span class="hud-battery-fill"></span></span>84%</span>
+    </div>
+    <div class="hud-node hud-bl">
+      <span>ISO 100</span><span>F1.8</span><span>1/250</span>
+    </div>
+  </div>
+
+  <div class="aperture" id="rdAperture">
+    <div class="blade" data-rot="rotate(0deg)" style="transform:rotate(0deg) scale(1.6)"></div>
+    <div class="blade" data-rot="rotate(60deg)" style="transform:rotate(60deg) scale(1.6)"></div>
+    <div class="blade" data-rot="rotate(120deg)" style="transform:rotate(120deg) scale(1.6)"></div>
+    <div class="blade" data-rot="rotate(180deg)" style="transform:rotate(180deg) scale(1.6)"></div>
+    <div class="blade" data-rot="rotate(240deg)" style="transform:rotate(240deg) scale(1.6)"></div>
+    <div class="blade" data-rot="rotate(300deg)" style="transform:rotate(300deg) scale(1.6)"></div>
+  </div>
+  <div class="flash" id="rdFlash"></div>
+</div>
+
+<!-- ============================================================
+     NEW SITE — everything below is rebuilt from scratch
+     ============================================================ -->
+<div id="site">
+
+  <nav class="nav" id="nav">
+    <a href="#home" class="nav-logo"><img src="assets/images/logo.png" alt="RD Photography logo" class="nav-logo-img">RD <em>Photography</em></a>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get Started</a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-glow"></div>
+
+    <div class="hero-copy">
+      <p class="hero-eyebrow">Cinematic Wedding &amp; Portrait Studio</p>
+      <h1 class="hero-title">We Capture Life's <em>Finest</em> Moments</h1>
+      <p class="hero-desc">A Thiruppanandal-based studio crafting cinematic wedding films and portraits — built on patience, presence, and an eye for the moment nobody else saw.</p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Book Your Date →</a>
+        <a href="wedding-films.html" class="btn-play">
+          <span class="btn-play-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          Watch Our Reel
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-count="500"><span class="num-val">0</span><span>+</span></div>
+          <div class="stat-lbl">Weddings Shot</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="8"><span class="num-val">0</span><span>+</span></div>
+          <div class="stat-lbl">Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num" data-count="126"><span class="num-val">0</span><span>+</span></div>
+          <div class="stat-lbl">5★ Reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-frame">
+        <span class="hero-frame-corner tl"></span>
+        <span class="hero-frame-corner br"></span>
+        <img src="assets/images/hero2.jpg" alt="RD Photography behind the lens" loading="lazy">
+        <div class="hero-badge">
+          <span class="hero-badge-dot">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          </span>
+          <span class="hero-badge-txt"><b>5.0 Rated</b>126 Google reviews</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="hero-scroll-bar"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-visual reveal">
+      <div class="about-frame">
+        <span class="about-frame-corner tl"></span>
+        <span class="about-frame-corner br"></span>
+        <img src="assets/images/hero.jpg" alt="RD Photography team at work" loading="lazy">
+      </div>
+      <div class="about-stat-card">
+        <div class="about-stat"><b>750+</b><span>Weddings Captured</span></div>
+        <div class="about-stat"><b>5.0</b><span>Google Rating</span></div>
+      </div>
+    </div>
+
+    <div class="about-copy reveal">
+      <p class="tag">Our Story</p>
+      <h2 class="section-title">Rooted in Tamil Nadu's <em>wedding traditions</em></h2>
+      <p class="about-quote">"Every wedding is a universe of its own — we're here to make sure none of it disappears."</p>
+      <p class="about-body">Based in Thiruppanandal, our team has spent years documenting weddings across Tamil Nadu. Our approach is simple: be patient, be present, and never stop looking for the shot nobody else saw — from the delicate silk of a saree to the happy tears of a parent.</p>
+      <div class="about-detail-list">
+        <div class="about-detail">
+          <span class="about-detail-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Dedicated team, always on time
+        </div>
+        <div class="about-detail">
+          <span class="about-detail-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Quick delivery, HD quality output
+        </div>
+        <div class="about-detail">
+          <span class="about-detail-icon">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          Candid + traditional coverage
+        </div>
+      </div>
+      <a href="#contact" class="btn-outline">Book a Consultation →</a>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why" id="why">
+    <div class="why-top">
+      <div class="reveal">
+        <p class="tag">Why Choose Us</p>
+        <h2 class="section-title">We don't just click, <em>we create stories</em></h2>
+      </div>
+      <p class="why-desc reveal">We blend creativity, patience and technology to capture your most precious moments in the most beautiful way possible — no two weddings, and no two galleries, ever look the same.</p>
+    </div>
+
+    <div class="why-grid reveal-stagger">
+      <div class="why-card">
+        <span class="why-icon">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        </span>
+        <div class="why-name">Cinematic Quality</div>
+        <div class="why-desc-sm">4K video &amp; photo delivery, color-graded with a filmic eye.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </span>
+        <div class="why-name">Professional Team</div>
+        <div class="why-desc-sm">Experienced, dedicated crews who know how a wedding day moves.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </span>
+        <div class="why-name">Fast Delivery</div>
+        <div class="why-desc-sm">On-time delivery, every time, without compromising on quality.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><circle cx="12" cy="13" r="3"/></svg>
+        </span>
+        <div class="why-name">Premium Equipment</div>
+        <div class="why-desc-sm">Latest cameras, drones &amp; stabilizers for every kind of shot.</div>
+      </div>
+      <div class="why-card">
+        <span class="why-icon">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </span>
+        <div class="why-name">Client Satisfaction</div>
+        <div class="why-desc-sm">250+ happy couples, and a 5.0 rating across 126 reviews.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-top">
+      <div class="reveal">
+        <p class="tag">What We Offer</p>
+        <h2 class="section-title">Every chapter of your <em>story</em>, covered</h2>
+      </div>
+      <a href="#contact" class="btn-outline reveal">Get a Quote →</a>
+    </div>
+
+    <div class="services-grid reveal-stagger">
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="1"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><circle cx="12" cy="13" r="3"/></svg></span>
+        <div class="svc-name">Wedding Photography</div>
+        <p class="svc-desc">Full-day coverage from mehendi to reception, every candid and traditional frame.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></span>
+        <div class="svc-name">Wedding Videography</div>
+        <p class="svc-desc">Cinematic films with natural light and real emotion — a movie of your day.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+        <div class="svc-name">Pre-Wedding Shoot</div>
+        <p class="svc-desc">Intimate outdoor sessions at golden hour, in a setting that's truly yours.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M4 12H2m20 0h-2M12 4V2m0 20v-2M6.3 6.3 4.9 4.9m14.2 14.2-1.4-1.4M17.7 6.3l1.4-1.4M6.3 17.7l-1.4 1.4"/></svg></span>
+        <div class="svc-name">Reception Coverage</div>
+        <p class="svc-desc">Every toast, dance and detail from the celebration, captured in full.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6M2 12h6M16 12h6M12 16v6M8 8l-3-3M16 8l3-3M8 16l-3 3M16 16l3 3"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <div class="svc-name">Drone Coverage</div>
+        <p class="svc-desc">Sweeping aerial shots of the venue, the crowd, and the moment from above.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="4"/><path d="M6 21c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg></span>
+        <div class="svc-name">Baby &amp; Family Shoot</div>
+        <p class="svc-desc">Gentle, patient sessions built around a little one's own pace and mood.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2s2 2 2 4-2 3-2 3-2-1-2-3 2-4 2-4z"/><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M4 16h16"/></svg></span>
+        <div class="svc-name">Birthday &amp; Events</div>
+        <p class="svc-desc">Candid, colorful coverage of the milestones worth celebrating properly.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M2 7l10 7 10-7"/></svg></span>
+        <div class="svc-name">Corporate Events</div>
+        <p class="svc-desc">Clean, professional documentation for launches, offsites and conferences.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card">
+        <span class="svc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+        <div class="svc-name">Album Designing</div>
+        <p class="svc-desc">Handcrafted, archival-quality albums made to be passed down.</p>
+        <a href="#contact" class="svc-link">Enquire <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio-top reveal">
+      <p class="tag">Featured Portfolio</p>
+      <h2 class="section-title">A glimpse of <em>our work</em></h2>
+    </div>
+
+    <div class="portfolio-filters reveal">
+      <button class="pf-btn active" data-filter="all">All</button>
+      <button class="pf-btn" data-filter="wedding">Wedding</button>
+      <button class="pf-btn" data-filter="pre-wedding">Pre-Wedding</button>
+      <button class="pf-btn" data-filter="reception">Reception</button>
+      <button class="pf-btn" data-filter="outdoor">Outdoor</button>
+      <button class="pf-btn" data-filter="drone">Drone</button>
+    </div>
+
+    <div class="portfolio-grid reveal">
+      <div class="pf-item" data-category="wedding">
+        <img src="assets/images/gallery-1.jpg" alt="Wedding ceremony moment" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Wedding</span><span class="pf-title">The Ceremony</span></div>
+      </div>
+      <div class="pf-item" data-category="pre-wedding">
+        <img src="assets/images/gallery-2.jpg" alt="Pre-wedding couple portrait" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Pre-Wedding</span><span class="pf-title">Golden Hour</span></div>
+      </div>
+      <div class="pf-item" data-category="outdoor">
+        <img src="assets/images/gallery-3.jpg" alt="Outdoor couple shoot" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Outdoor</span><span class="pf-title">Open Fields</span></div>
+      </div>
+      <div class="pf-item" data-category="reception">
+        <img src="assets/images/gallery-4.jpg" alt="Bridal portrait at reception" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Reception</span><span class="pf-title">Bridal Portrait</span></div>
+      </div>
+      <div class="pf-item" data-category="drone">
+        <img src="assets/images/gallery-5.jpg" alt="Aerial drone shot of venue" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Drone</span><span class="pf-title">From Above</span></div>
+      </div>
+      <div class="pf-item" data-category="wedding">
+        <img src="assets/images/gallery-6.jpeg" alt="Bridal details" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Wedding</span><span class="pf-title">The Details</span></div>
+      </div>
+      <div class="pf-item" data-category="reception">
+        <img src="assets/images/gallery-7.jpeg" alt="Reception celebration" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Reception</span><span class="pf-title">The Celebration</span></div>
+      </div>
+      <div class="pf-item" data-category="pre-wedding">
+        <img src="assets/images/gallery-8.jpeg" alt="Pre-wedding candid moment" loading="lazy">
+        <span class="pf-zoom"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <div class="pf-overlay"><span class="pf-cat">Pre-Wedding</span><span class="pf-title">Just Us Two</span></div>
+      </div>
+    </div>
+
+    <div class="portfolio-cta reveal">
+      <a href="portfolio.html" class="btn-primary">View Full Portfolio →</a>
+    </div>
+  </section>
+
+  <!-- WEDDING FILMS -->
+  <section class="films" id="films">
+    <div class="films-top">
+      <div class="reveal">
+        <p class="tag">Wedding Films</p>
+        <h2 class="section-title">Cinematic <em>wedding stories</em></h2>
+      </div>
+      <div class="films-nav reveal">
+        <button id="filmsPrev" aria-label="Previous"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button id="filmsNext" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
+
+    <div class="films-track reveal" id="filmsTrack">
+      <div class="film-card" data-src="assets/videos/wedding-highlight.mp4">
+        <div class="film-thumb">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Wedding Highlight film thumbnail" loading="lazy">
+          <span class="film-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-duration">03:45</span>
+        </div>
+        <div class="film-name">Wedding Highlight</div>
+        <div class="film-meta">Aisha &amp; Karthik · Thanjavur</div>
+      </div>
+      <div class="film-card" data-src="assets/videos/cinematic-teaser.mp4">
+        <div class="film-thumb">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=95" alt="Cinematic teaser film thumbnail" loading="lazy">
+          <span class="film-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-duration">01:25</span>
+        </div>
+        <div class="film-name">Cinematic Teaser</div>
+        <div class="film-meta">Priya &amp; Arjun · Kumbakonam</div>
+      </div>
+      <div class="film-card" data-src="assets/videos/instagram-reel.mp4">
+        <div class="film-thumb">
+          <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=600&q=95" alt="Instagram reel thumbnail" loading="lazy">
+          <span class="film-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-duration">00:45</span>
+        </div>
+        <div class="film-name">Instagram Reel</div>
+        <div class="film-meta">Fathima &amp; Ahamed · Thiruppanandal</div>
+      </div>
+      <div class="film-card" data-src="assets/videos/drone-shoot.mp4">
+        <div class="film-thumb">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Drone shoot film thumbnail" loading="lazy">
+          <span class="film-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-duration">02:30</span>
+        </div>
+        <div class="film-name">Drone Shoot</div>
+        <div class="film-meta">Venue flyover · Kumbakonam</div>
+      </div>
+      <div class="film-card" data-src="assets/videos/full-wedding-film.mp4">
+        <div class="film-thumb">
+          <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=95" alt="Full wedding film thumbnail" loading="lazy">
+          <span class="film-play"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="film-duration">45:20</span>
+        </div>
+        <div class="film-name">Full Wedding Film</div>
+        <div class="film-meta">Meera &amp; Sowkath · Full ceremony</div>
+      </div>
+    </div>
+
+    <div class="films-cta reveal">
+      <a href="wedding-films.html" class="btn-outline">View All Videos →</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-top reveal">
+      <p class="tag">Gallery</p>
+      <h2 class="section-title">Moments we've <em>preserved</em></h2>
+    </div>
+
+    <div class="gallery-mosaic reveal">
+      <div class="gl-item g1">
+        <img src="assets/images/gallery-9.jpeg" alt="Wedding ceremony" loading="lazy">
+        <div class="gl-overlay"><span class="gl-label">The Ceremony</span></div>
+      </div>
+      <div class="gl-item g2">
+        <img src="assets/images/gallery-10.jpeg" alt="Bridal portrait" loading="lazy">
+        <div class="gl-overlay"><span class="gl-label">Bridal Portrait</span></div>
+      </div>
+      <div class="gl-item g3">
+        <img src="assets/images/gallery-11.jpeg" alt="Wedding couple" loading="lazy">
+        <div class="gl-overlay"><span class="gl-label">Together</span></div>
+      </div>
+      <div class="gl-item g4">
+        <img src="assets/images/gallery-12.jpeg" alt="Candid wedding moment" loading="lazy">
+        <div class="gl-overlay"><span class="gl-label">Candid</span></div>
+      </div>
+      <div class="gl-item g5">
+        <img src="assets/images/gallery-13.jpeg" alt="Reception detail" loading="lazy">
+        <div class="gl-overlay"><span class="gl-label">Reception</span></div>
+      </div>
+      <div class="gl-item g6">
+        <img src="assets/images/gallery-14.jpeg" alt="Outdoor wedding shoot" loading="lazy">
+        <div class="gl-overlay"><span class="gl-label">Outdoors</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTICS -->
+  <section class="stats" id="stats">
+    <div class="stats-top reveal">
+      <p class="tag">By The Numbers</p>
+      <h2 class="section-title">Trusted by <em>hundreds</em> of couples</h2>
+    </div>
+
+    <div class="stats-grid reveal-stagger">
+      <div class="stat-block">
+        <div class="stat-num" data-count="750"><span class="num-val">0</span><span>+</span></div>
+        <div class="stat-lbl">Weddings Shot</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num" data-count="8"><span class="num-val">0</span><span>+</span></div>
+        <div class="stat-lbl">Years Experience</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num" data-count="300"><span class="num-val">0</span><span>+</span></div>
+        <div class="stat-lbl">Happy Couples</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num" data-count="12"><span class="num-val">0</span><span>+</span></div>
+        <div class="stat-lbl">Team Members</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR EQUIPMENT -->
+  <section class="equipment" id="equipment">
+    <div class="equipment-top reveal">
+      <p class="tag">Our Equipment</p>
+      <h2 class="section-title">Gear built for <em>the moment</em></h2>
+      <p class="equipment-desc">We invest in cinema-grade cameras, glass and stabilization so every frame holds up — whether it's viewed on a phone screen or a 4K projector at your reception.</p>
+    </div>
+
+    <div class="equipment-list reveal-stagger">
+      <div class="eq-row">
+        <span class="eq-index">01</span>
+        <div class="eq-thumb">
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&q=80" alt="Sony A7S III camera body" loading="lazy">
+        </div>
+        <div class="eq-info">
+          <div class="eq-name">Sony A7S III</div>
+          <span class="eq-tag">Cinema Camera</span>
+        </div>
+        <p class="eq-spec">4K 120fps &amp; 15+ stops of dynamic range — our primary body for low-light ceremony coverage.</p>
+      </div>
+      <div class="eq-row">
+        <span class="eq-index">02</span>
+        <div class="eq-thumb">
+          <img src="https://images.unsplash.com/photo-1613323593608-abc90fec84ff?w=400&q=80" alt="Sony FX3 cinema camera" loading="lazy">
+        </div>
+        <div class="eq-info">
+          <div class="eq-name">Sony FX3</div>
+          <span class="eq-tag">Cinema Camera</span>
+        </div>
+        <p class="eq-spec">Our second-shooter body for wedding films — compact rig, full-frame sensor, natural skin tones.</p>
+      </div>
+      <div class="eq-row">
+        <span class="eq-index">03</span>
+        <div class="eq-thumb">
+          <img src="https://images.unsplash.com/photo-1508614999368-9260051292e5?w=400&q=80" alt="Prime and zoom camera lenses" loading="lazy">
+        </div>
+        <div class="eq-info">
+          <div class="eq-name">GM Lens Set</div>
+          <span class="eq-tag">24-70mm &amp; 85mm</span>
+        </div>
+        <p class="eq-spec">A fast zoom for coverage and an 85mm prime for portraits — razor focus, buttery background blur.</p>
+      </div>
+      <div class="eq-row">
+        <span class="eq-index">04</span>
+        <div class="eq-thumb">
+          <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&q=80" alt="DJI drone" loading="lazy">
+        </div>
+        <div class="eq-info">
+          <div class="eq-name">DJI Mavic 3 Pro</div>
+          <span class="eq-tag">Drone</span>
+        </div>
+        <p class="eq-spec">Triple-camera aerial system for sweeping venue flyovers and establishing shots.</p>
+      </div>
+      <div class="eq-row">
+        <span class="eq-index">05</span>
+        <div class="eq-thumb">
+          <img src="https://images.unsplash.com/photo-1589872307379-0ffdf9829123?w=400&q=80" alt="Handheld camera gimbal stabilizer" loading="lazy">
+        </div>
+        <div class="eq-info">
+          <div class="eq-name">DJI RS3 Pro</div>
+          <span class="eq-tag">Gimbal Stabilizer</span>
+        </div>
+        <p class="eq-spec">Silky handheld movement through the mandapam, the aisle, and every dance floor.</p>
+      </div>
+      <div class="eq-row">
+        <span class="eq-index">06</span>
+        <div class="eq-thumb">
+          <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=400&q=80" alt="LED lighting panel for video" loading="lazy">
+        </div>
+        <div class="eq-info">
+          <div class="eq-name">Aputure 300D</div>
+          <span class="eq-tag">Lighting</span>
+        </div>
+        <p class="eq-spec">Daylight-balanced LED for evening portraits and reception stage coverage.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="testi-top reveal">
+      <p class="tag">Testimonials</p>
+      <h2 class="section-title">Kind words from <em>real couples</em></h2>
+      <div class="testi-rating">
+        <span class="testi-stars">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+        </span>
+        <span class="testi-rating-txt">5.0 rating · 126 Google reviews</span>
+      </div>
+    </div>
+
+    <div class="testi-grid reveal-stagger">
+      <div class="testi-card">
+        <span class="testi-quote-mark">“</span>
+        <div class="testi-stars sm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+        </div>
+        <p class="testi-text">They didn't just take photos — they disappeared into the day and somehow still caught every moment that mattered. Watching the film back felt like living the wedding all over again.</p>
+        <div class="testi-footer">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&q=80" alt="Aisha" loading="lazy"></div>
+          <div class="testi-who"><b>Aisha &amp; Karthik</b><span>Thanjavur</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-quote-mark">“</span>
+        <div class="testi-stars sm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+        </div>
+        <p class="testi-text">Our pre-wedding shoot alone had our families in tears of joy. The team was patient with our elderly relatives and made everyone feel comfortable in front of the camera.</p>
+        <div class="testi-footer">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&q=80" alt="Priya" loading="lazy"></div>
+          <div class="testi-who"><b>Priya &amp; Arjun</b><span>Kumbakonam</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-quote-mark">“</span>
+        <div class="testi-stars sm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+        </div>
+        <p class="testi-text">The drone shots of our venue at sunset were unreal. And the full ceremony film arrived faster than any studio we'd spoken to promised.</p>
+        <div class="testi-footer">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=200&q=80" alt="Fathima" loading="lazy"></div>
+          <div class="testi-who"><b>Fathima &amp; Ahamed</b><span>Thiruppanandal</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-quote-mark">“</span>
+        <div class="testi-stars sm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+        </div>
+        <p class="testi-text">Booking them was the easiest decision of our whole wedding planning. Professional, punctual, and the album they designed is genuinely a family heirloom now.</p>
+        <div class="testi-footer">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=200&q=80" alt="Meera" loading="lazy"></div>
+          <div class="testi-who"><b>Meera &amp; Sowkath</b><span>Kumbakonam</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-quote-mark">“</span>
+        <div class="testi-stars sm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+        </div>
+        <p class="testi-text">Our baby's first birthday shoot was pure chaos on our end, but you'd never know it from the photos. They caught the one perfect laugh out of a hundred cries.</p>
+        <div class="testi-footer">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&q=80" alt="Divya" loading="lazy"></div>
+          <div class="testi-who"><b>Divya &amp; Bharath</b><span>Thanjavur</span></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <span class="testi-quote-mark">“</span>
+        <div class="testi-stars sm">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2L12 16.6l-6.3 4.4 2.3-7.2-6-4.4h7.6z"/></svg>
+        </div>
+        <p class="testi-text">We were nervous about a corporate event feeling too stiff on camera. Instead we got a reel our whole office has been sharing since launch day.</p>
+        <div class="testi-footer">
+          <div class="testi-avatar"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=200&q=80" alt="Nandhini" loading="lazy"></div>
+          <div class="testi-who"><b>Nandhini &amp; Vignesh</b><span>Thiruppanandal</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM FEED -->
+  <section class="instagram" id="instagram">
+    <div class="insta-top reveal">
+      <p class="tag">Follow Along</p>
+      <h2 class="section-title">Behind the scenes on <em>Instagram</em></h2>
+      <a href="https://instagram.com/rd__photography______" target="_blank" rel="noopener" class="insta-handle">@rd__photography______</a>
+    </div>
+
+    <div class="insta-grid reveal-stagger">
+      <a class="insta-item" href="https://instagram.com/rd__photography______" target="_blank" rel="noopener">
+        <img src="assets/images/gallery-15.jpeg" alt="Wedding ceremony moment on Instagram" loading="lazy">
+        <div class="insta-overlay">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+      </a>
+      <a class="insta-item" href="https://instagram.com/rd__photography______" target="_blank" rel="noopener">
+        <img src="assets/images/gallery-16.jpeg" alt="Bridal portrait on Instagram" loading="lazy">
+        <div class="insta-overlay">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+      </a>
+      <a class="insta-item" href="https://instagram.com/rd__photography______" target="_blank" rel="noopener">
+        <img src="assets/images/gallery-17.jpeg" alt="Pre-wedding couple portrait on Instagram" loading="lazy">
+        <div class="insta-overlay">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+      </a>
+      <a class="insta-item" href="https://instagram.com/rd__photography______" target="_blank" rel="noopener">
+        <img src="assets/images/gallery-18.jpeg" alt="Aerial drone shot on Instagram" loading="lazy">
+        <div class="insta-overlay">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+      </a>
+      <a class="insta-item" href="https://instagram.com/rd__photography______" target="_blank" rel="noopener">
+        <img src="assets/images/gallery-19.jpeg" alt="Candid wedding moment on Instagram" loading="lazy">
+        <div class="insta-overlay">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+      </a>
+      <a class="insta-item" href="https://instagram.com/rd__photography______" target="_blank" rel="noopener">
+        <img src="assets/images/gallery-20.jpeg" alt="Reception celebration on Instagram" loading="lazy">
+        <div class="insta-overlay">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+      </a>
+    </div>
+
+    <div class="insta-cta reveal">
+      <a href="https://instagram.com/rd__photography______" target="_blank" rel="noopener" class="btn-primary">Follow Us →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="faq-top reveal">
+      <p class="tag">FAQ</p>
+      <h2 class="section-title">Questions, <em>answered</em></h2>
+    </div>
+
+    <div class="faq-list reveal-stagger">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>How far in advance should we book?</span>
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Most of our couples lock their date 6-9 months out, especially for peak wedding season weekends in Tamil Nadu. A small advance secures your date on our calendar — the balance is due closer to the event.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>When will we receive our photos and videos?</span>
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>A curated preview gallery goes out within 72 hours. Full edited photos are delivered in 2-3 weeks, and your cinematic wedding film follows in 3-4 weeks depending on the season.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do you travel outside Tamil Nadu?</span>
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Yes — we regularly travel across South India and beyond for destination weddings. Travel, stay and logistics are quoted separately based on the location and duration.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Do we get the raw, unedited files?</span>
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>We deliver our fully edited, color-graded selection rather than raw files — this is where our style and craft actually happen. Raw footage add-ons can be discussed for videography packages on request.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Can you design and print a wedding album?</span>
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Absolutely — album design and printing is one of our core services. We'll shortlist your favourite frames together and hand-craft a layout before sending it for premium printing.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>How many people are on the team for a wedding?</span>
+          <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>A typical full-day wedding is covered by 2-4 of our team — a lead photographer, a cinematographer, and often a second shooter or drone pilot, depending on your package.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-top reveal">
+      <p class="tag">Get In Touch</p>
+      <h2 class="section-title">Let's start planning <em>your day</em></h2>
+      <p class="contact-desc">Tell us a little about your event and we'll get back to you within 24 hours with availability and a quote.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-detail">
+          <span class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.99.36 1.96.67 2.9a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.18-1.18a2 2 0 0 1 2.11-.45c.94.31 1.91.54 2.9.67A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div><span class="contact-label">Call / WhatsApp</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span>
+          <div><span class="contact-label">Email</span><a href="mailto:rdphotography97@gmail.com">rdphotography97@gmail.com</a></div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><span class="contact-label">Studio</span><span class="contact-static">Thiruppanandal, Tamil Nadu</span></div>
+        </div>
+        <div class="contact-detail">
+          <span class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          <div><span class="contact-label">Studio Hours</span><span class="contact-static">Mon – Sat, 9am – 7pm</span></div>
+        </div>
+
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="btn-primary contact-whatsapp">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 20.5l3.2-1.25a8.9 8.9 0 0 0 4.85 1.42 8.94 8.94 0 0 0 6.55-15.35zm-5.55 13.7a7.4 7.4 0 0 1-3.78-1.03l-.27-.16-2.09.82.7-2.05-.18-.28a7.44 7.44 0 1 1 13.8-3.98 7.42 7.42 0 0 1-8.18 6.68z"/></svg>
+          Chat on WhatsApp
+        </a>
+
+        <div class="contact-map">
+          <iframe
+            src="https://maps.google.com/maps?q=RD+Photography+Studio,Thiruppanandal&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="RD Photography Studio location map"></iframe>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cfName">Name</label>
+            <input type="text" id="cfName" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-field">
+            <label for="cfPhone">Phone</label>
+            <input type="tel" id="cfPhone" name="phone" placeholder="+91 " required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="cfEvent">Event Type</label>
+            <select id="cfEvent" name="eventType">
+              <option>Wedding</option>
+              <option>Pre-Wedding Shoot</option>
+              <option>Reception</option>
+              <option>Baby &amp; Family</option>
+              <option>Birthday &amp; Events</option>
+              <option>Corporate Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="cfDate">Event Date</label>
+            <input type="date" id="cfDate" name="date">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="cfVenue">Venue</label>
+          <input type="text" id="cfVenue" name="venue" placeholder="Venue name &amp; city">
+        </div>
+        <div class="form-field">
+          <label for="cfMessage">Message</label>
+          <textarea id="cfMessage" name="message" rows="4" placeholder="Tell us about your day..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Send Enquiry →</button>
+        <p class="form-success" id="formSuccess">Thanks! Your enquiry has been noted — we'll be in touch shortly.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- PREMIUM FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo"><img src="assets/images/logo.png" alt="RD Photography logo" class="footer-logo-img">RD <em>Photography</em></a>
+        <p class="footer-blurb">Cinematic wedding and portrait photography based in Thiruppanandal, Tamil Nadu — capturing moments, creating memories, one frame at a time.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/rd__photography______" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H7v3h3v6h3v-6h3l1-3h-4v-2a1 1 0 0 1 1-1z"/></svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 20.5l3.2-1.25a8.9 8.9 0 0 0 4.85 1.42 8.94 8.94 0 0 0 6.55-15.35zm-5.55 13.7a7.4 7.4 0 0 1-3.78-1.03l-.27-.16-2.09.82.7-2.05-.18-.28a7.44 7.44 0 1 1 13.8-3.98 7.42 7.42 0 0 1-8.18 6.68z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#films">Wedding Films</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Services</h4>
+        <a href="#services">Wedding Photography</a>
+        <a href="#services">Wedding Videography</a>
+        <a href="#services">Pre-Wedding Shoot</a>
+        <a href="#services">Drone Coverage</a>
+        <a href="#services">Baby &amp; Family Shoot</a>
+        <a href="#services">Album Designing</a>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4 class="footer-heading">Get In Touch</h4>
+        <a href="tel:+919876543210" class="footer-contact-line">+91 98765 43210</a>
+        <a href="mailto:rdphotography97@gmail.com" class="footer-contact-line">rdphotography97@gmail.com</a>
+        <span class="footer-contact-line static">Thiruppanandal, Tamil Nadu</span>
+
+        <p class="footer-newsletter-desc">Occasional updates on new work &amp; availability — no spam.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Your email" required aria-label="Email address">
+          <button type="submit" aria-label="Subscribe">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+        <p class="newsletter-success" id="newsletterSuccess">Thanks — you're subscribed!</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> RD Photography. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /#site -->
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-wrap">
+    <button class="video-modal-close" id="videoModalClose" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <video id="videoModalPlayer" controls playsinline></video>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-img-wrap">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <img id="lightboxImg" src="" alt="">
+    <p class="lightbox-caption"><span id="lightboxCat"></span> — <b id="lightboxTitle"></b></p>
+  </div>
+</div>
+
+<script src="assets/js/intro.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
