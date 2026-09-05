@@ -56,6 +56,78 @@
     document.addEventListener('rdIntroDone', runHeroEntrance, {once:true});
   }
 
+  /* ===================== Hero image slider ===================== */
+  (function(){
+    const slider = document.getElementById('heroSlider');
+    if (!slider) return;
+
+    const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+    const prevBtn = document.getElementById('heroPrev');
+    const nextBtn = document.getElementById('heroNext');
+    const dotsWrap = document.getElementById('heroDots');
+    let order = slides.map((_, i) => i); // order[0]=center, order[1]=next, order[last]=prev
+    let autoTimer = null;
+    const AUTO_DELAY = 2600;
+
+    let dots = [];
+    if (dotsWrap) {
+      dots = slides.map((_, i) => {
+        const b = document.createElement('button');
+        b.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        b.addEventListener('click', () => { goTo(i); startAuto(); });
+        dotsWrap.appendChild(b);
+        return b;
+      });
+    }
+
+    function render(){
+      const n = order.length;
+      order.forEach((slideIdx, pos) => {
+        const el = slides[slideIdx];
+        if (pos === 0) el.dataset.pos = 'center';
+        else if (pos === 1) el.dataset.pos = 'next';
+        else if (pos === n - 1) el.dataset.pos = 'prev';
+        else el.dataset.pos = 'hidden';
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === order[0]));
+    }
+    function goNext(){ order.push(order.shift()); render(); }
+    function goPrev(){ order.unshift(order.pop()); render(); }
+    function goTo(slideIdx){
+      const at = order.indexOf(slideIdx);
+      order = order.slice(at).concat(order.slice(0, at));
+      render();
+    }
+
+    function startAuto(){ stopAuto(); autoTimer = setInterval(goNext, AUTO_DELAY); }
+    function stopAuto(){ if (autoTimer) clearInterval(autoTimer); }
+
+    prevBtn?.addEventListener('click', () => { goPrev(); startAuto(); });
+    nextBtn?.addEventListener('click', () => { goNext(); startAuto(); });
+
+    let startX = 0, dragging = false;
+    function dragStart(x){ dragging = true; startX = x; stopAuto(); }
+    function dragEnd(x){
+      if (!dragging) return;
+      dragging = false;
+      const delta = x - startX;
+      if (delta < -40) goNext();
+      else if (delta > 40) goPrev();
+      startAuto();
+    }
+
+    slider.addEventListener('mousedown', e => dragStart(e.clientX));
+    window.addEventListener('mouseup', e => dragEnd(e.clientX));
+    slider.addEventListener('touchstart', e => dragStart(e.touches[0].clientX), {passive:true});
+    slider.addEventListener('touchend', e => dragEnd(e.changedTouches[0].clientX));
+
+    slider.addEventListener('mouseenter', stopAuto);
+    slider.addEventListener('mouseleave', startAuto);
+
+    render();
+    startAuto();
+  })();
+
   function initReveals(){
     const items = document.querySelectorAll('.reveal, .reveal-stagger');
     if (HAS_GSAP && !REDUCED_MOTION){
