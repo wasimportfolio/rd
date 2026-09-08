@@ -177,6 +177,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   position:relative;
   min-height:100vh;
   display:grid;grid-template-columns:1.05fr 0.95fr;align-items:flex-start;
+  max-width:1600px;margin:0 auto;
   padding:9rem 4rem 4rem;
   overflow:hidden;
 }
