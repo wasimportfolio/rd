@@ -164,24 +164,19 @@
   });
 })(); 
 /* ============================================================
-   Phase 3 — portfolio filters + lightbox
+   Phase 3 — portfolio lightbox
+   (the old click-based category filter was removed: the
+   .pf-btn elements are now <a href="portfolio.html?category=...">
+   links, not buttons with data-filter, so that handler used to
+   fire on click, find data-filter = undefined, and add the
+   "hidden" class to EVERY .pf-item right before navigating away.
+   That hidden state then got cached in the browser's history
+   entry for this page, so pressing Back showed a page with every
+   image hidden. Removing it fixes Back navigation.)
    ============================================================ */
 (function(){
-  const filterBtns = document.querySelectorAll('.pf-btn');
   const items = document.querySelectorAll('.pf-item');
-  if (!filterBtns.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat = btn.dataset.filter;
-      items.forEach(item => {
-        const match = cat === 'all' || item.dataset.category === cat;
-        item.classList.toggle('hidden', !match);
-      });
-    });
-  });
+  if (!items.length) return;
 
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
