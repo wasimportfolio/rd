@@ -317,7 +317,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 }
 
 @media(max-width:640px){
-  .hero-visual{height:96vw;max-height:340px;--slide-w:84%}
+  .hero-visual{height:96vw;max-height:500px;--slide-w:84%}
   .hero-slide img{object-position:center 22%}
 }
 
