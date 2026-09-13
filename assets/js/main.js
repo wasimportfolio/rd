@@ -151,17 +151,69 @@
     const valueEl = el.querySelector('.num-val');
     const run = () => {
       if (!valueEl) return;
-      if (HAS_GSAP && !REDUCED_MOTION){
-        gsap.fromTo({v:0}, {v:target}, {v:target, duration:1.3, ease:'power1.out',
-          onUpdate: function(){ valueEl.textContent = Math.round(this.targets()[0].v); }});
-      } else {
-        valueEl.textContent = target;
+      if (REDUCED_MOTION){ valueEl.textContent = target; return; }
+      const duration = 1300;
+      const start = performance.now();
+      function tick(now){
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        valueEl.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(tick);
       }
+      requestAnimationFrame(tick);
     };
     new IntersectionObserver((entries, obs) => {
       entries.forEach(e => { if (e.isIntersecting){ run(); obs.disconnect(); } });
-    }, {threshold:0.6}).observe(el);
+    }, {threshold:0.4}).observe(el);
   });
+
+  document.querySelectorAll('.intl-video, .contact-video').forEach(v => {
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.play().catch(() => {});
+        else entry.target.pause();
+      });
+    }, {threshold:0.4}).observe(v);
+  });
+
+  /* ===================== About section image/video slider ===================== */
+  (function(){
+    const slider = document.getElementById('aboutSlider');
+    if (!slider) return;
+    const slides = Array.from(slider.querySelectorAll('.about-slide'));
+    if (slides.length < 2) return;
+    let idx = slides.findIndex(s => s.classList.contains('active'));
+    if (idx < 0) idx = 0;
+    const prevBtn = document.getElementById('aboutPrev');
+    const nextBtn = document.getElementById('aboutNext');
+
+    function goTo(next){
+      if (next === idx) return;
+      slides[idx].classList.remove('active');
+      const vid = slides[idx].querySelector('video');
+      if (vid) vid.pause();
+
+      idx = next;
+      slides[idx].classList.add('active');
+      const nextVid = slides[idx].querySelector('video');
+      if (nextVid){
+        nextVid.currentTime = 0;
+        nextVid.play().catch(err => console.error('About video play failed:', err));
+      }
+    }
+
+    function goNext(){ goTo((idx + 1) % slides.length); }
+    function goPrev(){ goTo((idx - 1 + slides.length) % slides.length); }
+
+    // Manual navigation only — no auto-play/auto-slide for this slider.
+    prevBtn?.addEventListener('click', goPrev);
+    nextBtn?.addEventListener('click', goNext);
+
+    // Clicking the peeking (inactive) slide also switches to it.
+    slides.forEach((slideEl, i) => {
+      slideEl.addEventListener('click', () => { if (i !== idx) goTo(i); });
+    });
+  })();
 })(); 
 /* ============================================================
    Phase 3 — portfolio lightbox
