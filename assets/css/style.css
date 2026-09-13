@@ -403,12 +403,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .about-frame-corner.br{bottom:1rem;right:1rem;border-bottom-width:1.5px;border-right-width:1.5px}
 .about-caption{
   position:absolute;left:10%;right:10%;bottom:5%;z-index:4;
-  padding:2.2rem 1.5rem 1.4rem;border-radius:0 0 14px 14px;
+  padding:2.2rem 1.5rem 1rem;border-radius:0 0 14px 14px;
   background:linear-gradient(180deg,rgba(14,14,14,0) 0%,rgba(14,14,14,0.78) 62%,rgba(14,14,14,0.92) 100%);
 }
-.about-name{font-family:var(--display);font-size:1.6rem;font-weight:400;color:#fff}
+.about-name{font-family:var(--display);font-size:1.4rem;font-weight:400;color:#fff}
 .about-role{
-  font-family:var(--display);font-size:0.85rem;letter-spacing:0.16em;
+  font-family:var(--display);font-size:0.75rem;letter-spacing:0.16em;
   text-transform:uppercase;color:var(--primary);margin-top:0.4rem;
 }
 .about-stat-card{
@@ -1162,12 +1162,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
     }
     .about-caption{
   position:absolute;left:10%;right:10%;bottom:5%;z-index:4;
-  padding:2rem 1.2rem 0.8rem;border-radius:0 0 14px 14px;
+  padding:2rem 1.2rem 0.5rem;border-radius:0 0 14px 14px;
   background:linear-gradient(180deg,rgba(14,14,14,0) 0%,rgba(14,14,14,0.78) 62%,rgba(14,14,14,0.92) 100%);
 }
-.about-name{font-family:var(--display);font-size:1.2rem;font-weight:400;color:#fff}
+.about-name{font-family:var(--display);font-size:1rem;font-weight:400;color:#fff}
 .about-role{
-  font-family:var(--display);font-size:0.65rem;letter-spacing:0.16em;
+  font-family:var(--display);font-size:0.55rem;letter-spacing:0.16em;
   text-transform:uppercase;color:var(--primary);margin-top:0.2rem;
 }
 }
