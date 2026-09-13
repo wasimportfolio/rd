@@ -168,6 +168,7 @@
   });
 
   document.querySelectorAll('.intl-video, .contact-video').forEach(v => {
+    v.muted = true; // mobile browsers (iOS Safari, Chrome Android) block autoplay unless muted
     new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.play().catch(() => {});
