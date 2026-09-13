@@ -168,13 +168,28 @@
   });
 
   document.querySelectorAll('.intl-video, .contact-video').forEach(v => {
-    v.muted = true; // mobile browsers (iOS Safari, Chrome Android) block autoplay unless muted
     new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.play().catch(() => {});
         else entry.target.pause();
       });
     }, {threshold:0.4}).observe(v);
+  });
+
+  /* ===================== Film-thumb preview autoplay (muted) ===================== */
+  // The small preview videos inside each Wedding Films card should
+  // autoplay silently once scrolled into view, looping — clicking the
+  // card still opens the full video with sound in the modal (handled
+  // separately below), this only controls the muted thumbnail preview.
+  document.querySelectorAll('.film-thumb video').forEach(v => {
+    v.muted = true;
+    v.loop = true;
+    new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.play().catch(() => {});
+        else entry.target.pause();
+      });
+    }, {threshold:0.3}).observe(v);
   });
 
   /* ===================== About section image/video slider ===================== */
