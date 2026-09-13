@@ -26,7 +26,7 @@ html{scroll-behavior:smooth;font-size:16px}
   --mono:'JetBrains Mono',monospace;
 
   --ease:cubic-bezier(0.22,1,0.36,1);
-  --container:1360px;
+  --container:1600px;
 }
 
 body{
@@ -177,7 +177,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   position:relative;
   min-height:100vh;
   display:grid;grid-template-columns:1.05fr 0.95fr;align-items:flex-start;
-  max-width:1600px;margin:0 auto;
+  max-width:var(--container);margin:0 auto;
   padding:9rem 4rem 4rem;
   overflow:hidden;
 }
@@ -347,45 +347,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 }
 .about-visual{position:relative}
 .about-frame{
-  position:relative;aspect-ratio:4/5;max-width:560px;
+  position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--border);
+  aspect-ratio:4/5;
 }
-.about-slider{position:relative;width:100%;height:100%}
-.about-slide{
-  position:absolute;top:50%;left:50%;width:80%;height:90%;
-  border-radius:14px;overflow:hidden;border:1px solid var(--border);cursor:pointer;
-  box-shadow:0 14px 30px rgba(0,0,0,0.3);
-  transition:transform .6s cubic-bezier(.22,.61,.36,1),filter .5s ease,box-shadow .5s ease;
-  filter:brightness(0.5) saturate(0.85) contrast(1.05);z-index:2;
-}
-.about-slide.active{
-  transform:translate(-50%,-50%) translateX(0) scale(1);
-  z-index:3;cursor:default;filter:none;
-  box-shadow:0 25px 55px rgba(0,0,0,0.4);
-}
-.about-slide:first-child:not(.active){
-  transform:translate(-50%,-50%) translateX(-34%) scale(0.84);
-}
-.about-slide:last-child:not(.active){
-  transform:translate(-50%,-50%) translateX(34%) scale(0.84);
-}
-.about-slide img,.about-slide video{
-  width:100%;height:100%;object-fit:cover;display:block;
-  filter:saturate(0.92) contrast(1.02);
-}
-
 .about-frame img{filter:saturate(0.92) contrast(1.02)}
-
-.about-frame-corner{position:absolute;width:24px;height:24px;border-color:var(--primary);border-style:solid;border-width:0;z-index:5}
+.about-frame-corner{position:absolute;width:24px;height:24px;border-color:var(--primary);border-style:solid;border-width:0;z-index:3}
 .about-frame-corner.tl{top:1rem;left:1rem;border-top-width:1.5px;border-left-width:1.5px}
 .about-frame-corner.br{bottom:1rem;right:1rem;border-bottom-width:1.5px;border-right-width:1.5px}
 .about-caption{
-  position:absolute;left:10%;right:10%;bottom:5%;z-index:4;
-  padding:2.2rem 1.5rem 1rem;border-radius:0 0 14px 14px;
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:2.2rem 1.5rem 1.4rem;
   background:linear-gradient(180deg,rgba(14,14,14,0) 0%,rgba(14,14,14,0.78) 62%,rgba(14,14,14,0.92) 100%);
 }
-.about-name{font-family:var(--display);font-size:1.4rem;font-weight:400;color:#fff}
+.about-name{font-family:var(--display);font-size:1.6rem;font-weight:400;color:#fff}
 .about-role{
-  font-family:var(--display);font-size:0.75rem;letter-spacing:0.16em;
+  font-family:var(--display);font-size:0.85rem;letter-spacing:0.16em;
   text-transform:uppercase;color:var(--primary);margin-top:0.4rem;
 }
 .about-stat-card{
@@ -422,9 +398,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .about{grid-template-columns:1fr;padding:5rem 1.6rem;gap:3rem}
   .about-stat-card{position:static;margin-top:1.4rem;right:0;bottom:0;display:inline-flex}
 }
-@media(max-width:640px){
-  .about-frame{max-width:400px;margin:0 auto}
-}
 
 /* ================= INTERNATIONAL PORTFOLIO (framed video) ================= */
 .intl-portfolio{padding:2rem 4rem 8rem;max-width:var(--container);margin:0 auto}
@@ -447,6 +420,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
   .intl-portfolio{padding:1rem 1.6rem 5rem}
   .intl-frame{aspect-ratio:16/9}
 }
+
+
 
 /* ================= WHY CHOOSE US ================= */
 .why{padding:2rem 4rem 8rem;max-width:var(--container);margin:0 auto}
@@ -1138,14 +1113,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
         gap: 1.5rem;
     }
     .about-caption{
-  position:absolute;left:10%;right:10%;bottom:5%;z-index:4;
-  padding:2rem 1.2rem 0.5rem;border-radius:0 0 14px 14px;
+  position:absolute;left:0;right:0;bottom:0;z-index:4;
+  padding:1.8rem 1.2rem 1.1rem;
   background:linear-gradient(180deg,rgba(14,14,14,0) 0%,rgba(14,14,14,0.78) 62%,rgba(14,14,14,0.92) 100%);
 }
-.about-name{font-family:var(--display);font-size:1rem;font-weight:400;color:#fff}
+.about-name{font-family:var(--display);font-size:1.15rem;font-weight:400;color:#fff}
 .about-role{
-  font-family:var(--display);font-size:0.55rem;letter-spacing:0.16em;
-  text-transform:uppercase;color:var(--primary);margin-top:0.2rem;
+  font-family:var(--display);font-size:0.65rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--primary);margin-top:0.3rem;
 }
 }
 
